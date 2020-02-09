@@ -42,9 +42,11 @@ Import the following:
 #import <CloudmersiveBarcodeApiClient/CMDefaultConfiguration.h>
 // load models
 #import <CloudmersiveBarcodeApiClient/CMBarcodeLookupResponse.h>
+#import <CloudmersiveBarcodeApiClient/CMBarcodeScanResult.h>
 #import <CloudmersiveBarcodeApiClient/CMProductMatch.h>
 // load API classes for accessing endpoints
 #import <CloudmersiveBarcodeApiClient/CMBarcodeLookupApi.h>
+#import <CloudmersiveBarcodeApiClient/CMBarcodeScanApi.h>
 #import <CloudmersiveBarcodeApiClient/CMGenerateBarcodeApi.h>
 
 ```
@@ -91,6 +93,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CMBarcodeLookupApi* | [**barcodeLookupEanLookup**](docs/CMBarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup a barcode value and return product data
+*CMBarcodeScanApi* | [**barcodeScanImage**](docs/CMBarcodeScanApi.md#barcodescanimage) | **POST** /barcode/scan/image | Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
 *CMGenerateBarcodeApi* | [**generateBarcodeEAN13**](docs/CMGenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
 *CMGenerateBarcodeApi* | [**generateBarcodeEAN8**](docs/CMGenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
 *CMGenerateBarcodeApi* | [**generateBarcodeQRCode**](docs/CMGenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
@@ -101,6 +104,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CMBarcodeLookupResponse](docs/CMBarcodeLookupResponse.md)
+ - [CMBarcodeScanResult](docs/CMBarcodeScanResult.md)
  - [CMProductMatch](docs/CMProductMatch.md)
 
 

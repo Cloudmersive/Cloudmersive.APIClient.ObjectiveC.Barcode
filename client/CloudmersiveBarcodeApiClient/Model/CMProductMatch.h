@@ -22,9 +22,11 @@
 
 @interface CMProductMatch : CMObject
 
-
+/* EAN code for the product [optional]
+ */
 @property(nonatomic) NSString* eAN;
-
+/* Title of the product [optional]
+ */
 @property(nonatomic) NSString* title;
 
 @end

@@ -25,9 +25,11 @@
 
 @interface CMBarcodeLookupResponse : CMObject
 
-
+/* True if operation was successful, false otherwise [optional]
+ */
 @property(nonatomic) NSNumber* successful;
-
+/* Resulting product matches for the input barcode [optional]
+ */
 @property(nonatomic) NSArray<CMProductMatch>* matches;
 
 @end

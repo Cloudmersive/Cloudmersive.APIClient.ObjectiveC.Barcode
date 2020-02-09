@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "CloudmersiveBarcodeApiClient"
-    s.version          = "1.1.2"
+    s.version          = "1.1.3"
 
     s.summary          = "barcodeapi"
     s.description      = <<-DESC
