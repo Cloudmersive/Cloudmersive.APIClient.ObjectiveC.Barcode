@@ -50,8 +50,8 @@ NSInteger kCMBarcodeLookupApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
-/// Lookup a barcode value and return product data
-/// 
+/// Lookup EAN barcode value, return product data
+/// Lookup an input EAN barcode and return key details about the product
 ///  @param value Barcode value 
 ///
 ///  @returns CMBarcodeLookupResponse*

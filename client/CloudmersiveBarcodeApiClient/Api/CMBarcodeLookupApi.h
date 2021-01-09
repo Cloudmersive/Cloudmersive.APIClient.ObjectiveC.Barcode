@@ -23,8 +23,8 @@ extern NSInteger kCMBarcodeLookupApiMissingParamErrorCode;
 
 -(instancetype) initWithApiClient:(CMApiClient *)apiClient NS_DESIGNATED_INITIALIZER;
 
-/// Lookup a barcode value and return product data
-/// 
+/// Lookup EAN barcode value, return product data
+/// Lookup an input EAN barcode and return key details about the product
 ///
 /// @param value Barcode value
 /// 

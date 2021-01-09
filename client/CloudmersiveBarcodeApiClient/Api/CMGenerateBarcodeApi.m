@@ -49,14 +49,14 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
 #pragma mark - Api Methods
 
 ///
+/// Generate a EAN-13 code barcode as PNG file
 /// Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
-/// 
 ///  @param value Barcode value to generate from 
 ///
-///  @returns NSURL*
+///  @returns NSData*
 ///
 -(NSURLSessionTask*) generateBarcodeEAN13WithValue: (NSString*) value
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSData* output, NSError* error)) handler {
     // verify the required parameter 'value' is set
     if (value == nil) {
         NSParameterAssert(value);
@@ -76,7 +76,7 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"image/png"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/octet-stream"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -106,23 +106,23 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"NSData*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((NSData*)data, error);
                                 }
                             }];
 }
 
 ///
+/// Generate a EAN-8 code barcode as PNG file
 /// Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
-/// 
 ///  @param value Barcode value to generate from 
 ///
-///  @returns NSURL*
+///  @returns NSData*
 ///
 -(NSURLSessionTask*) generateBarcodeEAN8WithValue: (NSString*) value
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSData* output, NSError* error)) handler {
     // verify the required parameter 'value' is set
     if (value == nil) {
         NSParameterAssert(value);
@@ -142,7 +142,7 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"image/png"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/octet-stream"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -172,23 +172,23 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"NSData*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((NSData*)data, error);
                                 }
                             }];
 }
 
 ///
+/// Generate a QR code barcode as PNG file
 /// Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
-/// 
 ///  @param value QR code text to convert into the QR code barcode 
 ///
-///  @returns NSURL*
+///  @returns NSData*
 ///
 -(NSURLSessionTask*) generateBarcodeQRCodeWithValue: (NSString*) value
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSData* output, NSError* error)) handler {
     // verify the required parameter 'value' is set
     if (value == nil) {
         NSParameterAssert(value);
@@ -208,7 +208,7 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"image/png"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/octet-stream"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -238,23 +238,23 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"NSData*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((NSData*)data, error);
                                 }
                             }];
 }
 
 ///
+/// Generate a UPC-A code barcode as PNG file
 /// Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
-/// 
 ///  @param value UPC-A barcode value to generate from 
 ///
-///  @returns NSURL*
+///  @returns NSData*
 ///
 -(NSURLSessionTask*) generateBarcodeUPCAWithValue: (NSString*) value
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSData* output, NSError* error)) handler {
     // verify the required parameter 'value' is set
     if (value == nil) {
         NSParameterAssert(value);
@@ -274,7 +274,7 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"image/png"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/octet-stream"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -304,23 +304,23 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"NSData*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((NSData*)data, error);
                                 }
                             }];
 }
 
 ///
+/// Generate a UPC-E code barcode as PNG file
 /// Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
-/// 
 ///  @param value UPC-E barcode value to generate from 
 ///
-///  @returns NSURL*
+///  @returns NSData*
 ///
 -(NSURLSessionTask*) generateBarcodeUPCEWithValue: (NSString*) value
-    completionHandler: (void (^)(NSURL* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSData* output, NSError* error)) handler {
     // verify the required parameter 'value' is set
     if (value == nil) {
         NSParameterAssert(value);
@@ -340,7 +340,7 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"image/png"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/octet-stream"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -370,10 +370,10 @@ NSInteger kCMGenerateBarcodeApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"NSURL*"
+                              responseType: @"NSData*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((NSURL*)data, error);
+                                    handler((NSData*)data, error);
                                 }
                             }];
 }

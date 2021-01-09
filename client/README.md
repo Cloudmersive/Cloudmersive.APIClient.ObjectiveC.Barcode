@@ -73,7 +73,7 @@ NSString* *value = value_example; // Barcode value
 
 CMBarcodeLookupApi *apiInstance = [[CMBarcodeLookupApi alloc] init];
 
-// Lookup a barcode value and return product data
+// Lookup EAN barcode value, return product data
 [apiInstance barcodeLookupEanLookupWithValue:value
               completionHandler: ^(CMBarcodeLookupResponse* output, NSError* error) {
                             if (output) {
@@ -92,13 +92,13 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CMBarcodeLookupApi* | [**barcodeLookupEanLookup**](docs/CMBarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup a barcode value and return product data
-*CMBarcodeScanApi* | [**barcodeScanImage**](docs/CMBarcodeScanApi.md#barcodescanimage) | **POST** /barcode/scan/image | Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
-*CMGenerateBarcodeApi* | [**generateBarcodeEAN13**](docs/CMGenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
-*CMGenerateBarcodeApi* | [**generateBarcodeEAN8**](docs/CMGenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
-*CMGenerateBarcodeApi* | [**generateBarcodeQRCode**](docs/CMGenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
-*CMGenerateBarcodeApi* | [**generateBarcodeUPCA**](docs/CMGenerateBarcodeApi.md#generatebarcodeupca) | **POST** /barcode/generate/upc-a | Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
-*CMGenerateBarcodeApi* | [**generateBarcodeUPCE**](docs/CMGenerateBarcodeApi.md#generatebarcodeupce) | **POST** /barcode/generate/upc-e | Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+*CMBarcodeLookupApi* | [**barcodeLookupEanLookup**](docs/CMBarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
+*CMBarcodeScanApi* | [**barcodeScanImage**](docs/CMBarcodeScanApi.md#barcodescanimage) | **POST** /barcode/scan/image | Scan and recognize an image of a barcode
+*CMGenerateBarcodeApi* | [**generateBarcodeEAN13**](docs/CMGenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
+*CMGenerateBarcodeApi* | [**generateBarcodeEAN8**](docs/CMGenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
+*CMGenerateBarcodeApi* | [**generateBarcodeQRCode**](docs/CMGenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
+*CMGenerateBarcodeApi* | [**generateBarcodeUPCA**](docs/CMGenerateBarcodeApi.md#generatebarcodeupca) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file
+*CMGenerateBarcodeApi* | [**generateBarcodeUPCE**](docs/CMGenerateBarcodeApi.md#generatebarcodeupce) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file
 
 
 ## Documentation For Models

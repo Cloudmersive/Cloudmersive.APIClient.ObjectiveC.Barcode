@@ -4,7 +4,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**barcodeLookupEanLookup**](CMBarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup a barcode value and return product data
+[**barcodeLookupEanLookup**](CMBarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
 
 
 # **barcodeLookupEanLookup**
@@ -13,7 +13,9 @@ Method | HTTP request | Description
         completionHandler: (void (^)(CMBarcodeLookupResponse* output, NSError* error)) handler;
 ```
 
-Lookup a barcode value and return product data
+Lookup EAN barcode value, return product data
+
+Lookup an input EAN barcode and return key details about the product
 
 ### Example 
 ```objc
@@ -29,7 +31,7 @@ NSString* value = value_example; // Barcode value
 
 CMBarcodeLookupApi*apiInstance = [[CMBarcodeLookupApi alloc] init];
 
-// Lookup a barcode value and return product data
+// Lookup EAN barcode value, return product data
 [apiInstance barcodeLookupEanLookupWithValue:value
           completionHandler: ^(CMBarcodeLookupResponse* output, NSError* error) {
                         if (output) {
